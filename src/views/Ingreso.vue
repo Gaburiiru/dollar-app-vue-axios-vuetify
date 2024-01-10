@@ -89,7 +89,6 @@ export default {
         await this.nuevoUsuario(usuario);
         router.push({ name: "home" });
         
-        redirigir()
       } catch (error) {
         console.log(error);
       }
