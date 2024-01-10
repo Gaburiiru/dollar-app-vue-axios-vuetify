@@ -32,6 +32,7 @@ router.beforeEach((to, from, next) => {
     if (!usuario) {
       next({ path: "/ingreso" });
     } else {
+      console.log("usuario despues de logear "+usuario);
       next();
     }
   } else {

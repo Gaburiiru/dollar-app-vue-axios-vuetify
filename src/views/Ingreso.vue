@@ -85,7 +85,7 @@ export default {
           uid: user.uid,
           foto: user.photoURL,
         };
-
+        console.log("usuario antes de logear "+usuario);
         await this.nuevoUsuario(usuario);
         router.push({ name: "home" });
         
