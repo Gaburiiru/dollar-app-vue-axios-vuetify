@@ -74,7 +74,6 @@ export default {
 
     async ingresar(provider) {
       firebase.auth().languageCode = "es";
-
       try {
         const result = await firebase.auth().signInWithPopup(provider);
         const user = result.user;
@@ -87,9 +86,10 @@ export default {
           foto: user.photoURL,
         };
 
-        this.nuevoUsuario(usuario);
+        await this.nuevoUsuario(usuario);
         router.push({ name: "home" });
-        // router.push("/");
+        
+        redirigir()
       } catch (error) {
         console.log(error);
       }
