@@ -86,11 +86,11 @@ export default {
           foto: user.photoURL,
         };
         console.log("usuario antes de logear "+usuario);
-        await this.nuevoUsuario(usuario);
+        this.nuevoUsuario(usuario);
         router.push({ name: "home" });
         
       } catch (error) {
-        console.log(error);
+        console.log("error de sesion "+error);
       }
     },
   },
