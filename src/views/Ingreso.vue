@@ -88,8 +88,8 @@ export default {
         };
 
         this.nuevoUsuario(usuario);
-        // router.push({ name: "home" });
-        router.push("/home");
+        router.push({ name: "home" });
+        // router.push("/");
       } catch (error) {
         console.log(error);
       }
